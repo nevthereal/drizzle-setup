@@ -5,7 +5,10 @@ import { usersTable } from '$lib/schema';
 
 export const load: PageServerLoad = async () => {
 	const users = await db.query.usersTable.findMany({
-		orderBy: [asc(usersTable.id)]
+		orderBy: [asc(usersTable.id)],
+		with: {
+			posts: true
+		}
 	});
 
 	return { users };

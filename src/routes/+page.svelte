@@ -19,5 +19,11 @@
 	<div>
 		<h1>Username: {user.username} (id {user.id})</h1>
 		<p>Admin: {user.admin}</p>
+		<h2>Posts:</h2>
+		{#each user.posts as post, index}
+			<div>
+				<h3>Post {post.id}: {post.body}</h3>
+			</div>
+		{/each}
 	</div>
 {/each}
