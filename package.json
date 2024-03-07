@@ -11,8 +11,9 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"generate": "drizzle-kit generate:sqlite",
-		"migrate": "drizzle-kit push:sqlite",
-		"studio": "drizzle-kit studio"
+		"migrate": "tsx ./src/lib/migrate.ts",
+		"studio": "drizzle-kit studio",
+		"drop": "drizzle-kit drop"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -37,6 +38,7 @@
 	"dependencies": {
 		"@libsql/client": "^0.4.2",
 		"dotenv": "^16.4.1",
-		"drizzle-orm": "^0.29.3"
+		"drizzle-orm": "^0.29.3",
+		"tsx": "^4.7.1"
 	}
 }

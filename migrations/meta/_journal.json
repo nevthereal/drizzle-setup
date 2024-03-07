@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1706620741942,
-      "tag": "0000_lame_red_ghost",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1708788165983,
-      "tag": "0001_dry_grey_gargoyle",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1708788365099,
-      "tag": "0002_kind_anita_blake",
+      "when": 1709819687018,
+      "tag": "0000_adorable_skrulls",
       "breakpoints": true
     }
   ]

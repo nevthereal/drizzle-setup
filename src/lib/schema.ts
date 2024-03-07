@@ -4,7 +4,8 @@ import { relations } from 'drizzle-orm';
 export const usersTable = sqliteTable('users', {
 	id: int('id').primaryKey(),
 	username: text('username'),
-	admin: int('admin', { mode: 'boolean' })
+	admin: int('admin', { mode: 'boolean' }),
+	tier: text('tier', { enum: ['Beginner', 'Scaler', 'Pro'] }).default('Beginner')
 });
 
 export const usersRelation = relations(usersTable, ({ many }) => ({
@@ -16,7 +17,8 @@ export const postsTable = sqliteTable('posts', {
 	authorId: int('authorId')
 		.notNull()
 		.references(() => usersTable.id),
-	body: text('body')
+	body: text('body'),
+	title: text('title').notNull()
 });
 
 export const postsRelation = relations(postsTable, ({ one }) => ({
@@ -25,3 +27,8 @@ export const postsRelation = relations(postsTable, ({ one }) => ({
 		references: [usersTable.id]
 	})
 }));
+
+export const newTable = sqliteTable('new', {
+	id: int('id').primaryKey(),
+	name: text('lol')
+});
